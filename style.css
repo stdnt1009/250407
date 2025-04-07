@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 2rem;
+    color: #1a73e8;
+    font-size: 2.5rem;
+}
+
+button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    background-color: #1557b0;
+    transform: scale(1.05);
+}
+
+.player {
+    margin-top: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.player iframe {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    margin: 15% auto;
+    padding: 2rem;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.close:hover {
+    color: #000;
+}
+
+#songTitle {
+    margin: 1rem 0;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.youtube-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #ff0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.2s;
+}
+
+.youtube-link:hover {
+    background-color: #cc0000;
+}
+
+/* Custom styles */
+.swal-popup {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+}
+
+.swal-title {
+    margin-bottom: 1rem;
+}
+
+.swal-html {
+    margin-top: 1rem;
+}
+
+/* Animation for the button */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#songBtn {
+    animation: pulse 2s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
